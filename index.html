@@ -1,0 +1,62 @@
+    <html>
+
+    <head>
+        <title>Saurabh's Todo App</title>
+
+    </head>
+
+    <body>
+
+
+        <button id="add_apple" onclick="addProduct('apple');">Apple</button>
+        <button id="add_tomato" onclick="addProduct('tomato');">Tomato</button>
+        <button id="add_eggs" onclick="addProduct('eggs');">Eggs</button>
+        <button id="clearCart" onclick="clearCart();">Clear cart</button>
+        <div id="cart"></div>
+
+      
+        
+        <script>
+
+
+
+            let cart = document.getElementById("cart");
+
+            function addProduct(btn_info){
+
+                if(btn_info==="apple"){
+                    addItem("Apple");
+                }else if(btn_info==="tomato"){
+                    addItem("Tomato");
+                }else if(btn_info==="eggs"){
+                    addItem("Eggs");
+
+                }
+
+            }
+
+
+            function clearCart(){
+                cart.innerHTML = "";
+            }
+
+            function addItem(item){
+
+                
+                let div = document.createElement("div");
+                div.innerHTML=item;
+                cart.appendChild(div);
+
+                
+            }
+
+
+    
+
+
+        </script>
+
+
+    </body>
+
+    </html>
